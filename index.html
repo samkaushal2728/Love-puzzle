@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Love Puzzle</title>
+    <title>Valentine's Day Love Puzzle Game</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f8e1e1; text-align: center; }
-        #puzzle { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .piece { width: 100px; height: 100px; background-color: #ff6b81; display: flex; justify-content: center; align-items: center; font-size: 24px; cursor: pointer; }
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; text-align: center; }
+        h1 { color: #ff3366; }
+        .riddle { margin: 20px; }
     </style>
 </head>
 <body>
-    <h1>Valentine's Day Love Puzzle</h1>
-    <div id="puzzle"></div>
-    <button id="shuffle">Shuffle</button>
-    <script>
-        const words = ['Love', 'Heart', 'Cupid', 'Romance', 'Together', 'Hugs', 'Kisses'];
-        let shuffledWords = [];
-
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        function createPuzzle() {
-            const puzzle = document.getElementById('puzzle');
-            puzzle.innerHTML = '';
-            shuffledWords.forEach(word => {
-                const piece = document.createElement('div');
-                piece.classList.add('piece');
-                piece.textContent = word;
-                piece.onclick = () => alert(`You clicked on: ${word}`);
-                puzzle.appendChild(piece);
-            });
-        }
-
-        document.getElementById('shuffle').onclick = () => {
-            shuffledWords = shuffle([...words]);
-            createPuzzle();
-        };
-
-        // Initial shuffle and create
-        shuffledWords = shuffle([...words]);
-        createPuzzle();
-    </script>
+    <h1>Happy Valentine's Day my love, my Prince!</h1>
+    <p>Sorry for the attitude that led to the argument lately, I'm so sorry. Will you be my Valentine?</p>
+    
+    <h2>Memory Game</h2>
+    <p>Match the pairs!</p>
+    <!-- Memory game implementation would go here -->
+    
+    <h2>Photo Display</h2>
+    <img src="Photo.jpg" alt="A beautiful memory" style="width:300px;height:auto;">
+    
+    <h2>Riddle Questions</h2>
+    <div class="riddle">
+        <p>1. I have keys but open no locks. What am I?</p>
+        <input type="text" placeholder="Your answer">
+        <p>2. I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
+        <input type="text" placeholder="Your answer">
+        <p>3. I can be cracked, made, told, and played. What am I?</p>
+        <input type="text" placeholder="Your answer">
+        <p>4. The more of this there is, the less you see. What is it?</p>
+        <input type="text" placeholder="Your answer">
+        <p>5. I’m light as a feather, yet the strongest person can’t hold me for 5 minutes. What am I?</p>
+        <input type="text" placeholder="Your answer">
+    </div>
+    
+    <h2>Final Romantic Message</h2>
+    <p>I won't leave you I'll be with you forever, whatever misunderstandings come between us, please don't give up on me. And if I'm being so attitude, just come and talk to me, just come like console me or talk to me like you do. Then I'll be yours. All I love you so much and will you be my forever?</p>
 </body>
 </html>
